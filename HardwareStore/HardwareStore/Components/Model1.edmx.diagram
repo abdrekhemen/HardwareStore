@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="43ab62ff9e114d16918a1be8ecc187b8" Name="Diagram1">
+        <EntityTypeShape EntityType="HardwareStore322_abdullovModel.Feedback" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HardwareStore322_abdullovModel.Order" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HardwareStore322_abdullovModel.Product" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HardwareStore322_abdullovModel.ProductPhotos" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HardwareStore322_abdullovModel.Sostav" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="HardwareStore322_abdullovModel.FK_Feedback_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="HardwareStore322_abdullovModel.FK_Sostav_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="HardwareStore322_abdullovModel.FK_ProductPhotos_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="HardwareStore322_abdullovModel.FK_Sostav_Product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

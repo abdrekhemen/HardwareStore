@@ -1,0 +1,42 @@
+﻿<Page x:Class="HardwareStore.Pages.AddOrRedactPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HardwareStore.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddOrRedactPage">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Width="60">id</TextBlock>
+                <TextBox IsEnabled="False" Text="{Binding Id}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="TitleTB" Width="60">Title</TextBlock>
+                <TextBox Text="{Binding Title}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="DescriptionTB" Width="60">Description</TextBlock>
+                <TextBox Text="{Binding Description}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="CostTB" Width="60">Cost</TextBlock>
+                <TextBox Text="{Binding Cost}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="DiscountTB" Width="60">Discount</TextBlock>
+                <TextBox  Text="{Binding Discount}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Margin="0 30 0  0">
+                <Image x:Name="ProductImg" Source="{Binding MainImage}" Width="200" Height="200"></Image>
+                <Button Name="ChangeImgBtn" Click="ChangeImgBtn_Click">Change Image</Button>
+                <Button Name="SaveChangesBtn" Click="SaveChangesBtn_Click">Save changes</Button>
+            </StackPanel>
+            
+        </StackPanel>
+
+    </Grid>
+</Page>

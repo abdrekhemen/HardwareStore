@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="HardwareStore.Components.ProductControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HardwareStore.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="450">
+    <Border Margin="20 20" BorderThickness="3" BorderBrush="Black">
+
+
+        <Grid Width="250" Height="350">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Height="170">
+                    <Image Width="200" Height="150" Source="{Binding MainImage}" Name="MainImageImg"></Image>
+                    <TextBlock Visibility="{Binding CostVisibility}" Panel.ZIndex="1" Margin="220 0 0 0" Width="40" Height="20" Name="DiscountTB" Background="Aqua"></TextBlock>
+                </StackPanel>
+
+                <TextBlock Margin="10 0" Name="ProductNameTB">Name</TextBlock>
+                <StackPanel Margin="10 10" Orientation="Horizontal">
+                    <Image Margin="0 0 0 0" Width="30" Source="\Resourses\rating.png"></Image>
+                    <TextBlock Margin="10 10" Name="RatingTB" >Rating</TextBlock>
+                    <TextBlock Margin="10 10" Name="ReviewsTB">Review</TextBlock>
+                    
+                    <Image Width="20" Source="/Resourses/reviewCount .png" />
+
+                </StackPanel>
+                <StackPanel Margin="10 15" Orientation="Horizontal">
+
+                    <TextBlock Name="PriceTB">Price</TextBlock>
+                    <TextBlock Visibility="{Binding CostVisibility}" Margin="10 0" TextDecorations="Strikethrough" Name="PriceWithoutDiscountTB">Discount</TextBlock>
+                    <Button Name="RedactBtn" Margin="10 0" Click="Button_Click">redact</Button>
+                    <Button  Name="DeleteBtn" Click="DeleteBtn_Click">delete</Button>
+                </StackPanel>
+                <StackPanel Height="50" Margin="0 10" Orientation="Horizontal">
+                    <Button BorderBrush="White" Background="White" Foreground="White" Click="Button_Click_1">
+                        <Image Margin="10 0" Width="50" Height="150" Source="\Resourses\addtocard.png"></Image>
+                    </Button>
+                    
+                    <Image Margin="20 0" Width="50" Source="\Resourses\likeimg.png"></Image>
+                    <Image Margin="-50 -10" Width="147" Source="\Resourses\trendsImg.png" Height="72"/>
+                </StackPanel>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</UserControl>

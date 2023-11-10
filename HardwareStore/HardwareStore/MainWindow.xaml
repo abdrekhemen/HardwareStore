@@ -1,0 +1,30 @@
+﻿<Window x:Class="HardwareStore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HardwareStore"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="740*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="390*"/>
+        </Grid.RowDefinitions>
+        
+        <Frame NavigationUIVisibility="Hidden" Name="MainFrame" Grid.Row="1" Grid.Column="2" Margin="0,0,0,0" />
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="1" >
+            <Button Margin="0 30" Name="BackBTn" Click="BackBTn_Click">Назад</Button>
+            <PasswordBox Name="passTB"></PasswordBox>
+            
+            <Button Name="AdmBTN" Click="AdmBTN_Click">Админ</Button>
+            
+            <Button Visibility="Collapsed" Name="AdmExitBtn" Click="AdmExitBtn_Click">Выйти</Button>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>
