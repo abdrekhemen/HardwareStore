@@ -146,7 +146,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="date" Type="DateTime" Precision="0" />
           <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TotalCost" Type="Double" />
+          <Property Name="TotalCost" Type="Int32" />
           <NavigationProperty Name="Sostav" Relationship="Self.FK_Sostav_Order" FromRole="Order" ToRole="Sostav" />
         </EntityType>
         <EntityType Name="Product">
