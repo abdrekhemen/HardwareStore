@@ -19,14 +19,14 @@ namespace HardwareStore.Components
                     return (Convert.ToDouble(Cost) - (Convert.ToDouble(Cost) * Discount)).ToString();
             }
         }
-        public decimal TotalCost
+        public double TotalCost
         {
             get
             {
                 if (Discount != null)
-                    return (Cost - (Cost * (decimal)Discount));
+                    return Convert.ToDouble((Cost - (Cost * (decimal)Discount)));
                 else
-                    return Cost;
+                    return Convert.ToDouble(Cost);
             }
         }
         public int ReviewCount

@@ -23,7 +23,7 @@ namespace HardwareStore.Components
         public int id { get; set; }
         public Nullable<System.DateTime> date { get; set; }
         public string status { get; set; }
-        public Nullable<int> TotalCost { get; set; }
+        public Nullable<double> TotalCost { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Sostav> Sostav { get; set; }

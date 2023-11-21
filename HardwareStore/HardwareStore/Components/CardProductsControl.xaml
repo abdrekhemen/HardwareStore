@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="HardwareStore.Components.CardProductsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HardwareStore.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="150">
+    <Grid>
+
+        <Border BorderBrush="Black" BorderThickness="1" Margin="5">
+            <StackPanel>
+                <TextBlock TextAlignment="Center">Название:</TextBlock>
+                <TextBlock TextAlignment="Center" Text="{Binding Title}"></TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                    <TextBlock>Цена</TextBlock>
+                    <TextBlock x:Name="CostTb" Text="{Binding TotalCost}" TextAlignment="Center" Margin="40 0 0 0" Width="80"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                    <TextBlock >Количество</TextBlock>
+                    <TextBox x:Name="KolvoTb" TextAlignment="Center" Margin="5 0 0 0" Width="80" TextChanged="KolvoTb_TextChanged" PreviewTextInput="KolvoTb_PreviewTextInput"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                    <TextBlock>Сумма</TextBlock>
+                    <TextBlock x:Name="SummTb" TextAlignment="Center" Margin="33 0 0 0" Width="80"></TextBlock>
+                </StackPanel>
+                <Button Margin="0 5" Width="30" x:Name="DeleteBtn" Click="DeleteBtn_Click">
+                    <Image Source="\Resourses\trashbox.png" Margin="1"/>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

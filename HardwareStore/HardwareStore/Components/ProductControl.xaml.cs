@@ -1,4 +1,5 @@
 ﻿using System;
+using HardwareStore.Pages;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,7 +55,8 @@ namespace HardwareStore.Components
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Navigation.NextPage(new PageComponents(new Pages.AddOrRedactPage(product)));
+            App.CardWp.Children.Add(new CardProductsControl(product));
+            App.productPage.Calc();
         }
 
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
