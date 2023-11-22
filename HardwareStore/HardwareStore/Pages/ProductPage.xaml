@@ -15,10 +15,7 @@
             <RowDefinition Height="458*"/>
             <RowDefinition Height="31*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="440*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Width="1000" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Width="1000" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Left" Grid.ColumnSpan="2">
             <StackPanel Orientation="Vertical">
                 <TextBlock>Сортировать по цене</TextBlock>
                 <ComboBox Name="CostSortCB" Width="100" SelectionChanged="CostSortCB_SelectionChanged">
@@ -58,11 +55,11 @@
                 <UserControl></UserControl>
             </WrapPanel>
         </ScrollViewer>
-        <StackPanel Grid.Row="2">
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
             <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Name="DataCountTB"></TextBlock>
         </StackPanel>
-
-        <ScrollViewer  Height="350" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Width="200" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Right" Width="200" Height="458" VerticalAlignment="Top">
+            <ScrollViewer Width="200"  Height="300" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Grid.Row="1"  HorizontalAlignment="Right" Grid.Column="1" >
             <Border BorderBrush="Black" BorderThickness="2">
                 <StackPanel>
                     <TextBlock>Итого в корзине:</TextBlock>
@@ -71,10 +68,13 @@
 
                     <WrapPanel Name="CardWP"></WrapPanel>
 
-                    <Button Name="OrderConfirmationBtn" Margin="0 290 0 0 " Click="OrderConfirmation_Click">Оформить заказ</Button>
-                </StackPanel>
-            </Border>
-        </ScrollViewer>
 
+                </StackPanel>
+
+            </Border>
+
+        </ScrollViewer>
+        <Button Height="20" Width="100" x:Name="OrderConfirmationBtn"  Click="OrderConfirmation_Click" Content="Оформить заказ" Grid.Row="1"/>
+        </StackPanel>
     </Grid>
 </Page>
